@@ -4,6 +4,7 @@ import { FiltersProvider } from './context/filters.jsx';
 import { ModalProvider } from "./context/modal.jsx";
 import PokeInfoModal from "./components/PokeInfoModal.jsx";
 import useGetPokeData from "./hooks/useGetPokeData.js";
+import Favorites from "./components/Favorites.jsx";
 
 function App() {
   const pokemonsList = useGetPokeData('https://pokeapi.co/api/v2/pokemon?limit=386')
@@ -11,6 +12,7 @@ function App() {
   return (
     <main className='max-w-[1400px] mx-auto p-2 h-full mb-5'>
       <ModalProvider>
+      <Favorites />
         <FiltersProvider>
           <SearchForm />
           <PokeList pokeData={pokemonsList} />

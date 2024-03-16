@@ -17,10 +17,10 @@ function Favorites() {
             <button onClick={() => setFavorites(!favorites)}>
                 <FaRegStar className={`fixed top-4 right-4 text-3xl z-20 ${favorites ? 'text-yellow-500' : ''}`} />
             </button>
-            <article className={`bg-slate-200 h-full sm:w-[35%] w-[60%] fixed right-0 top-0 duration-700 translate-x-[100%] z-10 rounded-tl-lg rounded-bl-lg overflow-y-auto hidden-scroll ${favorites ? '-translate-x-[0%]' : ''}`}>
+            <article className={`bg-slate-200 h-full sm:w-[35%] w-[60%] fixed right-0 top-0 duration-700 transform ${favorites ? 'translate-x-0' : 'translate-x-full'} z-10 rounded-tl-lg rounded-bl-lg overflow-y-auto hidden-scroll`}>
                 <h2 className='text-center text-3xl font-bold mt-3 mb-12 font-KodeMono'>Favoritos</h2>
                 <section className='pt-8 flex flex-wrap justify-center gap-3 gap-y-20'>
-                    {favsArray.map((pokeFav)=>(<PokeCard key={pokeFav} pokeData={`https://pokeapi.co/api/v2/pokemon/${pokeFav}`} />))}
+                    {favsArray?.map((pokeFav)=>(<PokeCard key={pokeFav} pokeData={`https://pokeapi.co/api/v2/pokemon/${pokeFav}`} />))}
                 </section>
             </article>
         </>

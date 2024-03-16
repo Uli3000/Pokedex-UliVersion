@@ -43,7 +43,7 @@ export default function PokeList({ pokeData }) {
     return (
         <div className="flex flex-wrap justify-center md:flex-row flex-col gap-y-20 mt-24">
             {
-                pokemonBySearch.map((pokeInfo) => (
+                pokemonBySearch?.map((pokeInfo) => (
                     <PokeCard key={pokeInfo.url} pokeData={pokeInfo.url} permanentWidht={true} />
                 ))
             }

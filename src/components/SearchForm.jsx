@@ -23,7 +23,7 @@ export function SearchForm() {
     return (
         <>
             <section className="flex items-end justify-center gap-3">
-                <h1 className='mt-2 text-5xl font-bold text-center text-slate-200 font-KodeMono'>PokeApi</h1>
+                <h1 className='mt-2 text-5xl font-bold text-center text-slate-200 font-KodeMono'>Pokedex</h1>
                 <MdCatchingPokemon className="text-5xl text-slate-200 hover:animate-bounce" />
             </section>
             <form onSubmit={handleSubmit} className='flex justify-center my-4 space-x-5'>
